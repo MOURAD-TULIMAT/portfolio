@@ -1,0 +1,64 @@
+/* src/components/Contact.css */
+.contact-section {
+  padding: 80px 20px; /* Reduced padding to minimize white space */
+  background-color: #fff;
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; 
+  min-height: 70vh; 
+}
+
+.contact-content {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-content h2 {
+  font-size: 3rem; /* Increased font size */
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.contact-icon {
+  color: #1e90ff;
+  font-size: 2rem; /* Larger icon size */
+}
+
+.contact-info a, .contact-info span {
+  font-size: 1.5rem; /* Increased font size */
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.contact-info a:hover {
+  transform: scale(1.04);
+  transition: transform 0.3s;
+  color: #1e90ff;
+}
+@media (max-width: 768px) {
+  .contact-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .contact-info a, .contact-info span {
+    font-size: 1.3rem;
+  }
+
+  .contact-icon {
+    font-size: 1.5rem;
+  }
+}
