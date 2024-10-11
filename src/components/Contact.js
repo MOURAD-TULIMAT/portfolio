@@ -23,12 +23,12 @@ const Contact = ({ onInViewChange }) => {
         <h2>Contact Me</h2>
         <div className="contact-info">
           <div className="contact-item">
-            <FaEnvelope className="contact-icon" />
-            <a href="mailto:mourad.japhar.tulimat@gmail.com">mourad.japhar.tulimat@gmail.com</a>
-          </div>
-          <div className="contact-item">
             <FaMapMarkerAlt className="contact-icon" />
             <span>Satwa, Dubai, UAE</span>
+          </div>
+          <div className="contact-item">
+            <FaEnvelope className="contact-icon" />
+            <a href="mailto:mourad.japhar.tulimat@gmail.com">mourad.japhar.tulimat@gmail.com</a>
           </div>
           <div className="contact-item">
             <FaLinkedin className="contact-icon" />

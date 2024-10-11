@@ -9,7 +9,7 @@ const Footer = ({ isVisible }) => {
     <motion.footer 
       className="footer"
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.2 }}
     >
       <div className="social-icons">
         <a href="https://linkedin.com/in/mourad-tulimat" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>

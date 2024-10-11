@@ -1,21 +1,19 @@
 /* src/components/Contact.css */
+
 .contact-section {
-  padding: 80px 20px; /* Reduced padding to minimize white space */
+  padding: 100px 20px;
   background-color: #fff;
-  display: flex;
-  align-items: center; /* Center content vertically */
-  justify-content: center; 
-  min-height: 70vh; 
+  min-height: 60vh;
 }
 
 .contact-content {
-  max-width: 800px;
-  width: 100%;
+  max-width: 600px;
+  margin: auto;
   text-align: center;
 }
 
 .contact-content h2 {
-  font-size: 3rem; /* Increased font size */
+  font-size: 2.5rem;
   margin-bottom: 40px;
   color: #333;
 }
@@ -35,30 +33,55 @@
 
 .contact-icon {
   color: #1e90ff;
-  font-size: 2rem; /* Larger icon size */
+  font-size: 1.5rem;
+  flex-shrink: 0;
 }
 
-.contact-info a, .contact-info span {
-  font-size: 1.5rem; /* Increased font size */
+.contact-item a,
+.contact-item span {
+  font-size: 1.1rem;
   color: #555;
   text-decoration: none;
   transition: color 0.3s;
 }
-.contact-info a:hover {
-  transform: scale(1.04);
-  transition: transform 0.3s;
+
+.contact-item a:hover {
   color: #1e90ff;
 }
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   .contact-content h2 {
-    font-size: 2.5rem;
-  }
-
-  .contact-info a, .contact-info span {
-    font-size: 1.3rem;
+    font-size: 2rem;
+    margin-bottom: 30px;
   }
 
   .contact-icon {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .contact-item a,
+  .contact-item span {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 80px 15px;
+  }
+
+  .contact-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .contact-icon {
+    font-size: 1.2rem;
+  }
+
+  .contact-item a,
+  .contact-item span {
+    font-size: 0.95rem;
   }
 }

@@ -1,3 +1,5 @@
+/* src/components/Header.css */
+
 .header {
   position: fixed;
   width: 100%;
@@ -37,4 +39,64 @@
 
 .nav-links li a:hover {
   color: #1e90ff;
+}
+
+/* Mobile Menu Icon */
+.mobile-menu-icon {
+  display: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Mobile Dropdown Menu */
+.mobile-dropdown {
+  background-color: #222;
+  width: 100%;
+  overflow: hidden;
+}
+
+.dropdown-links {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.dropdown-links li {
+  padding: 10px 20px;
+  border-top: 1px solid #333;
+}
+
+.dropdown-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.dropdown-links li a:hover {
+  background-color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  /* When the mobile menu is active, show the dropdown */
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Adjust based on header height */
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    padding: 20px 0;
+  }
 }
