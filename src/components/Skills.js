@@ -7,57 +7,59 @@ const Skills = () => {
   const skills = [
     {
       icon: <FaCode />,
-      title: 'Programming Languages',
-      list: ['C++', 'C#', 'Python', 'SQL', 'TypeScript', 'JavaScript']
+      title: 'Languages',
+      list: ['C#', 'Java', 'Python', 'C++', 'TypeScript']
     },
     {
       icon: <FaTools />,
-      title: 'Frameworks/Tools',
-      list: ['Entity Framework', 'ASP.NET Core', 'ASP.NET MVC', 'React']
+      title: 'Frameworks',
+      list: ['.NET Core', 'Spring Boot', 'React']
     },
     {
       icon: <FaCloud />,
-      title: 'Cloud Platforms',
-      list: ['Azure (Pipelines, Cloud Services)', 'AWS', 'Digital Ocean']
+      title: 'Cloud',
+      list: [
+        {
+          name: 'Azure',
+          sublist: [
+            'App Services',
+            'Functions',
+            'Key Vault',
+            'Blob Storage',
+            'SQL Database',
+            'DevOps (Pipelines)'
+          ]
+        },
+        {
+          name: 'AWS',
+          sublist: [
+            'CloudWatch Alarms',
+            'CodeDeploy (Blue/Green Deployments)'
+          ]
+        },
+        'Digital Ocean'
+      ]
     },
     {
       icon: <FaWrench />,
       title: 'Tools',
-      list: ['Azure Data Studio', 'GIT', 'Jira', 'macOS/Linux Command Line', 'Docker']
+      list: ['Git', 'Docker', 'Jira', 'Azure Data Studio', 'Linux/macOS CLI']
     },
     {
       icon: <FaBrain />,
-      title: 'Techniques',
-      list: [
-        'AGILE Development',
-        'API Design',
-        'Automation',
-        'Problem Solving',
-        'Design Patterns',
-        'System Design',
-        'Database Management',
-        'Cryptography',
-        'Reverse Engineering'
-      ]
+      title: 'Concepts',
+      list: ['Microservices', 'API Design', 'TDD', 'CI/CD', 'Design Patterns', 'Security']
     },
     {
       icon: <FaUserTie />,
-      title: 'Proven Soft Skills',
-      list: [
-        'Fast Learner',
-        'Adaptability',
-        'Analytical Thinking',
-        'Team Collaboration',
-        'Effective Communication',
-        'Ownership of Project Quality',
-        'Software Targets Achievement'
-      ]
+      title: 'Soft Skills',
+      list: ['Fast Learner', 'Team Collaboration', 'Problem Solving', 'Adaptability']
     }
   ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { 
+    visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.2
@@ -67,8 +69,8 @@ const Skills = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.5
@@ -78,7 +80,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="skills-section">
-      <motion.div 
+      <motion.div
         className="skills-content"
         initial="hidden"
         whileInView="visible"
@@ -89,8 +91,8 @@ const Skills = () => {
         <h2>Skills</h2>
         <div className="skills-grid">
           {skills.map((skill, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               className="skill-card"
               variants={itemVariants}
             >
@@ -98,7 +100,18 @@ const Skills = () => {
               <h3>{skill.title}</h3>
               <ul>
                 {skill.list.map((item, idx) => (
-                  <li key={idx}>{item}</li>
+                  typeof item === 'string' ? (
+                    <li key={idx}>{item}</li>
+                  ) : (
+                    <li key={idx}>
+                      <strong>{item.name}</strong>
+                      <ul>
+                        {item.sublist.map((sub, subIdx) => (
+                          <li key={subIdx}>{sub}</li>
+                        ))}
+                      </ul>
+                    </li>
+                  )
                 ))}
               </ul>
             </motion.div>
