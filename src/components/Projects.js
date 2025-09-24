@@ -6,16 +6,10 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
-      title: 'Diary Bot ©',
-      description: 'An automated scheduling tool that increased productivity by 60% for hotel and venue sales teams.',
-      technologies: ['.NET Core', 'MSSQL', 'C#'],
+      title: 'Emra Platform (side project)',
+      description: 'Service‑provider marketplace backend with ratings, pricing models, and Telegram bot notifications. Production‑ready CI/CD and Azure Blob storage for media.',
+      technologies: ['.NET 8', 'ASP.NET Core', 'EF Core', 'SQL Server', 'Docker', 'Azure Blob', 'CI/CD'],
     },
-    {
-      title: 'My Pharmacy Loyalty App',
-      description: 'Developed a RESTful API with real-time customer point tracking system integrated with accounting software.',
-      technologies: ['Node.js', 'Express', 'MongoDB'],
-    },
-    // Add more projects as needed
   ];
 
   return (
@@ -31,10 +25,12 @@ const Projects = () => {
         <div className="projects-grid">
           {projects.map((project, index) => (
             <motion.div 
-              key={index} 
+              key={index}
               className="project-card"
-              whileHover={{ scale: 1.05 }}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ type: 'spring', stiffness: 300 }}
+              viewport={{ once: true }}
             >
               <h3>{project.title}</h3>
               <p>{project.description}</p>

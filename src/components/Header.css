@@ -100,3 +100,29 @@
     padding: 20px 0;
   }
 }
+
+
+/* gpt:BEGIN brand-enhancements */
+.brand { display:flex; flex-direction:column; gap:4px; }
+.logo {
+  background: linear-gradient(90deg, #4f46e5, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+  font-weight: 800;
+}
+.tagline { font-size: 0.85rem; color: #aaa; margin: 0; }
+.nav-links .resume-link a {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  text-decoration: none;
+  transition: transform .15s ease, background-color .15s ease, border-color .15s ease;
+}
+.nav-links .resume-link a:hover {
+  transform: translateY(-1px);
+  background-color: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.35);
+}
+/* gpt:END brand-enhancements */

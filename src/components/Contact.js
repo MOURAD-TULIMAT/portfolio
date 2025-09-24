@@ -1,7 +1,7 @@
 // src/components/Contact.js
 import React, { useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub, FaHackerrank, FaCode } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaPhone, FaGithub, FaHackerrank, FaCode } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = ({ onInViewChange }) => {
@@ -29,6 +29,10 @@ const Contact = ({ onInViewChange }) => {
           <div className="contact-item">
             <FaEnvelope className="contact-icon" />
             <a href="mailto:mourad.japhar.tulimat@gmail.com">mourad.japhar.tulimat@gmail.com</a>
+          </div>
+          <div className="contact-item">
+            <FaPhone className="contact-icon" />
+            <span>+971 505 413 193</span>
           </div>
           <div className="contact-item">
             <FaLinkedin className="contact-icon" />

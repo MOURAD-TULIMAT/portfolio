@@ -68,3 +68,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Updated Content (Sep 24, 2025)
+
+- Synced portfolio content with latest resume (Experience, Skills, Projects).
+- Added gradient brand, subtitle, and Resume download link.
+- Improved contact section and footer links.

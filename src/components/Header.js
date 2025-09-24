@@ -19,7 +19,10 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="navbar">
-        <h1 className="logo">Mourad Tulimat</h1>
+        <div className="brand">
+            <h1 className="logo">Mourad Tulimat</h1>
+            <p className="tagline">Backend Software Developer (.NET / Azure / Spring Boot)</p>
+          </div>
         <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
           <li>
             <Link to="about" smooth={true} duration={500} onClick={closeMobileMenu}>
@@ -51,7 +54,12 @@ const Header = () => {
               Contact
             </Link>
           </li>
-        </ul>
+          <li className="resume-link">
+              <a href="/Mourad-Resume.pdf" target="_blank" rel="noopener noreferrer">
+                Resume
+              </a>
+            </li>
+          </ul>
         <div className="mobile-menu-icon" onClick={handleToggleMenu}>
           {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
         </div>
@@ -96,6 +104,11 @@ const Header = () => {
               <Link to="contact" smooth={true} duration={500} onClick={closeMobileMenu}>
                 Contact
               </Link>
+            </li>
+            <li className="resume-link">
+              <a href="/Mourad-Resume.pdf" target="_blank" rel="noopener noreferrer">
+                Resume
+              </a>
             </li>
           </ul>
         </motion.div>

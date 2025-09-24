@@ -14,7 +14,7 @@ const About = () => {
       >
         <h2>About Me</h2>
         <p>
-          I'm Mourad Tulimat, a Competitive Programmer, Mathematician, Software Developer, and Backend Specialist based in Dubai, UAE. With a strong foundation in mathematics and extensive experience in software development, I thrive on solving complex problems and building efficient, scalable backend systems.
+          I’m Mourad Tulimat — a Backend Software Developer focused on .NET and Azure. I’ve spent ~4 years building secure, high-availability REST APIs (C#, .NET 8, ASP.NET Core, EF Core, SQL Server), with strong CI/CD on Azure DevOps and production observability (Serilog, Application Insights). I’ve worked on financial services and airline integrations, and I care a lot about data integrity, idempotency, and clean, testable code.
         </p>
       </motion.div>
     </section>
